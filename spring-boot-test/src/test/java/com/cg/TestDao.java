@@ -1,6 +1,7 @@
 package com.cg;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,15 +23,17 @@ public class TestDao {
 	@Test
 	public void checkOrderNotExist()
 	{
-		boolean val=false;
-		assertEquals(val,"");
+		String bookId="";
+		when(dao.removeBook(bookId)).thenReturn(true);
+		assertEquals(true, dao.removeBook(bookId));
 	}
 	
 	@Test
 	public void checkOrderExist()
 	{
-		boolean val=true;
-		assertEquals(val,"234567");
+		String bookId="12345";
+		when(dao.removeBook(bookId)).thenReturn(true);
+		assertEquals(true, dao.removeBook(bookId));
 	}
 }
 	

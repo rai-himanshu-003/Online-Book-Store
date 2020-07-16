@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.bookStore.entities.Admin;
-import com.cg.bookStore.entities.Employee;
 
 
 @RestController
