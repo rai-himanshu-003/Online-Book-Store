@@ -24,8 +24,8 @@ public class TestDao {
 	public void checkOrderNotExist()
 	{
 		String bookId="";
-		when(dao.removeBook(bookId)).thenReturn(true);
-		assertEquals(true, dao.removeBook(bookId));
+		when(dao.removeBook(bookId)).thenReturn(false);
+		assertEquals(false, dao.removeBook(bookId));
 	}
 	
 	@Test
@@ -35,6 +35,23 @@ public class TestDao {
 		when(dao.removeBook(bookId)).thenReturn(true);
 		assertEquals(true, dao.removeBook(bookId));
 	}
+	@Test
+	public void checkOrder()
+	{
+		String bookId="@%#@%^@&#@^*&*&";
+		when(dao.removeBook(bookId)).thenReturn(false);
+		assertEquals(false, dao.removeBook(bookId));
+	}
+	@Test
+	public void checkOrder2()
+	{
+		String bookId="23482458734529";
+		when(dao.removeBook(bookId)).thenReturn(false);
+		assertEquals(false, dao.removeBook(bookId));
+	}
+	
+
+
 }
 	
 	
