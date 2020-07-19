@@ -19,7 +19,7 @@ public class TestDao {
 	@Autowired
 	RemoveBooksDao dao;
 	
-	
+	/*
 	@Test
 	public void checkOrderNotExist()
 	{
@@ -50,7 +50,7 @@ public class TestDao {
 		assertEquals(false, dao.removeBook(bookId));
 	}
 	
-
+*/
 
 }
 	

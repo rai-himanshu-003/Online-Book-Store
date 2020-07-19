@@ -25,7 +25,7 @@ public class TestController extends BookStoreApplicationTests {
 	}
 
 	@Test
-	public void testEmployee() throws Exception {
+	public void testAdmin() throws Exception {
 		mockMvc.perform(get("/admin")).andExpect(status().isOk())
 				.andExpect(content().contentType("application/json;charset=UTF-8"))
 				.andExpect(jsonPath("$.fullName").value("Himanshu Rai")).andExpect(jsonPath("$.adminId").value(1001))
