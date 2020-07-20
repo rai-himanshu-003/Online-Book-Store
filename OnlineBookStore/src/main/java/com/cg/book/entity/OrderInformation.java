@@ -28,7 +28,7 @@ public class OrderInformation {
 	private int orderId;
 	
 	@Column(name = "recipient_name")
-	private String recipientName;
+	public String recipientName="himanshu";
 	
 	@Column(name = "recipient_phone_no")
 	private String recipientPhoneNumber;

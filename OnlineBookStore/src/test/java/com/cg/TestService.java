@@ -32,7 +32,7 @@ import com.cg.book.service.RemoveBookFromOrderService;
 		@Test
 		public void checkOrderExist() throws BookIdException, BookIdNotFoundException
 		{
-			String bookId="200";
+			String bookId="150";
 			when(ser.removeBook(bookId)).thenReturn(true);
 			assertEquals(true, ser.removeBook(bookId));
 		}

@@ -65,6 +65,11 @@ public class Admin {
 		this.password = password;
 	}
 	
-	
-
+   public static void main(String[] args) {
+	OrderInformation order1 = new OrderInformation();
+	order1.recipientName="shivam";
+	System.out.println(order1.recipientName);
+	order1.setOrderStatus("shipped");
+	System.out.println(order1.getOrderStatus());
+   }
 }

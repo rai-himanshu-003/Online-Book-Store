@@ -19,7 +19,7 @@ public class RemoveBookFromOrderServiceImpl implements RemoveBookFromOrderServic
 		@Transactional
      public boolean removeBook(String bookId) throws BookIdException, BookIdNotFoundException {
 	
-		if(!bookId.matches("^[0-9]*$"))
+		if(!bookId.matches("^[0-9]{3,9}")) 
 			throw new BookIdException(OrderConstraints.BOOK_Id_EXCEPTION);
 		
 		else if(dao.removeBook(Integer.parseInt(bookId))!=true)
