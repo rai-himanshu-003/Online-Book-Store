@@ -17,6 +17,13 @@ public class RemoveBookFromOrderController {
 	private RemoveBookFromOrderService ser;
 
 	
+	/****************************
+	 * Method: deleteBook Description: To delete a book by book id from order
+	 * @return                   String
+	 * @exception                BookIdNotFoundException, BookIdException
+	 * CreatedDate               17- JULY 2020
+	 * CreatedBy                 Himanshu Rai
+	 ****************************/
 
 	@DeleteMapping("/deletebook/{bookId}")
 	public String deleteBook(@PathVariable("bookId")String bookId)throws BookIdException,

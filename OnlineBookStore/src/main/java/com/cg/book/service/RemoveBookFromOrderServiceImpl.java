@@ -16,10 +16,19 @@ public class RemoveBookFromOrderServiceImpl implements RemoveBookFromOrderServic
 	@Autowired
 	private RemoveBookFromOrderDao dao;
 	
+	
+	/****************************
+	 * Method: removeBook Description: To delete a particular book from order
+	 * @return                   boolean
+	 * @exception                BookIdNotFoundException, BookIdException
+	 * CreatedDate               16- JULY 2020
+	 * CreatedBy                 Himanshu Rai
+	 ****************************/
+	
 		@Transactional
      public boolean removeBook(String bookId) throws BookIdException, BookIdNotFoundException {
 	
-		if(!bookId.matches("^[0-9]{3,9}")) 
+		if(!bookId.matches("^[0-9]{2,9}")) 
 			throw new BookIdException(OrderConstraints.BOOK_Id_EXCEPTION);
 		
 		else if(dao.removeBook(Integer.parseInt(bookId))!=true)

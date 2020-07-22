@@ -16,7 +16,7 @@ import org.hibernate.annotations.DynamicUpdate;
 @DynamicUpdate
 @DynamicInsert
 public class Admin {
-
+	
 	@Id
 	@Column(name="admin_id")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="adminIdGenerator")
@@ -61,15 +61,16 @@ public class Admin {
 		return password;
 	}
 
+	
 	public void setPassword(String password) {
 		this.password = password;
 	}
 	
-   public static void main(String[] args) {
+  /* public static void main(String[] args) {
 	OrderInformation order1 = new OrderInformation();
 	order1.recipientName="shivam";
 	System.out.println(order1.recipientName);
 	order1.setOrderStatus("shipped");
 	System.out.println(order1.getOrderStatus());
-   }
+   }*/
 }
